@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68BD8E32214F518200405780 /* LoginPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E31214F518200405780 /* LoginPass.swift */; };
+		68BD8E34214F51EB00405780 /* LoginPass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BD8E33214F51EB00405780 /* LoginPass.xib */; };
+		68BD8E36214F520300405780 /* LoginPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E35214F520300405780 /* LoginPassViewController.swift */; };
 		B95728BC214BA5EB0079C09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95728BB214BA5EB0079C09F /* AppDelegate.swift */; };
 		B95728C4214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B95728C2214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld */; };
 		B95728C6214BA5ED0079C09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95728C5214BA5ED0079C09F /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68BD8E31214F518200405780 /* LoginPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPass.swift; sourceTree = "<group>"; };
+		68BD8E33214F51EB00405780 /* LoginPass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPass.xib; sourceTree = "<group>"; };
+		68BD8E35214F520300405780 /* LoginPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPassViewController.swift; sourceTree = "<group>"; };
 		B95728B8214BA5EB0079C09F /* iOSTraning2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTraning2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95728BB214BA5EB0079C09F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B95728C3214BA5EB0079C09F /* iOSTraning2018.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSTraning2018.xcdatamodel; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				B95728F1214BAD710079C09F /* LoginViewController.swift */,
+				68BD8E35214F520300405780 /* LoginPassViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +174,8 @@
 			children = (
 				B95728F2214BAD710079C09F /* LoginView.xib */,
 				B95728F5214BB0140079C09F /* LoginView.swift */,
+				68BD8E33214F51EB00405780 /* LoginPass.xib */,
+				68BD8E31214F518200405780 /* LoginPass.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 			files = (
 				B95728C9214BA5ED0079C09F /* LaunchScreen.storyboard in Resources */,
 				B95728C6214BA5ED0079C09F /* Assets.xcassets in Resources */,
+				68BD8E34214F51EB00405780 /* LoginPass.xib in Resources */,
 				B95728F4214BAD710079C09F /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B95728F3214BAD710079C09F /* LoginViewController.swift in Sources */,
+				68BD8E32214F518200405780 /* LoginPass.swift in Sources */,
 				B95728BC214BA5EB0079C09F /* AppDelegate.swift in Sources */,
+				68BD8E36214F520300405780 /* LoginPassViewController.swift in Sources */,
 				B95728F6214BB0140079C09F /* LoginView.swift in Sources */,
 				B95728C4214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld in Sources */,
 			);

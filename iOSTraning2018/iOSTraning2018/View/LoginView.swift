@@ -9,8 +9,10 @@
 import UIKit
 
 class LoginView: UIView {
-    @IBOutlet weak var btnHello: UIButton!
+    @IBOutlet weak var btnSignIn: UIButton!
     
+    @IBOutlet weak var textFiledEmail: UITextField!
+    @IBOutlet weak var textFilePassword: UITextField!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
