@@ -11,8 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="iOSTraning2018" customModuleProvider="target">
             <connections>
-                <outlet property="textFiledEmailClick" destination="sLA-RI-kc1" id="3fa-7F-Cs3"/>
-                <outlet property="textFiledPasswordClick" destination="x9F-s6-ang" id="0vz-y1-9Nn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

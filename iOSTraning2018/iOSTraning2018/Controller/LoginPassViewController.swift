@@ -16,7 +16,6 @@ class LoginPassViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginPassView.viewA.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +24,10 @@ class LoginPassViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func logout(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

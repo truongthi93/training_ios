@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14111"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,23 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2X3-fn-R0g">
-                    <rect key="frame" x="162" y="308.5" width="50" height="50"/>
-                    <color key="backgroundColor" red="0.46666666670000001" green="0.70588235290000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="7iF-1A-Oms"/>
-                        <constraint firstAttribute="height" constant="50" id="UM9-kp-vXA"/>
-                    </constraints>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-uA-qiq">
+                    <rect key="frame" x="163.5" y="318.5" width="48" height="30"/>
+                    <state key="normal" title="Logout"/>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchUpInside" id="GPk-HH-K2w"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="2X3-fn-R0g" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ErO-6V-yXZ"/>
-                <constraint firstItem="2X3-fn-R0g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aXz-9m-tiS"/>
+                <constraint firstItem="zIH-uA-qiq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7uO-tr-wP6"/>
+                <constraint firstItem="zIH-uA-qiq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aL9-C8-k2j"/>
             </constraints>
-            <connections>
-                <outlet property="viewA" destination="2X3-fn-R0g" id="dzZ-Gl-WCN"/>
-            </connections>
         </view>
     </objects>
 </document>

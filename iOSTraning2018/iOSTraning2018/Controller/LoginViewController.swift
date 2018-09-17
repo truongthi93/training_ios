@@ -22,16 +22,19 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loginView.textFiledEmail.text = ""
+        self.loginView.textFilePassword.text = ""
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var textFiledEmailClick: UITextField!
-    @IBOutlet weak var textFiledPasswordClick: UITextField!
-    
     @IBAction func btnHSignInClick(_ sender: Any) {
-        if (textFiledEmailClick.text == "admin" && textFiledPasswordClick.text == "123") {
+        if (loginView.textFiledEmail.text == "admin" && loginView.textFilePassword.text == "123") {
             
             let vc = LoginPassViewController(nibName: "LoginPass", bundle: nil)
             self.present(vc, animated: true, completion: nil)
