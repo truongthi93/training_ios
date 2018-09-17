@@ -1,0 +1,6 @@
+framework module Pods_iOSTraning2018UITests {
+  umbrella header "Pods-iOSTraning2018UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
