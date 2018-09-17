@@ -7,6 +7,6 @@
 //
 
 import UIKit
-class LoginPass: UIView {
+class ImageListView: UIView {
     
 }

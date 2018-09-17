@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loginView.textFiledEmail.text = ""
-        self.loginView.textFilePassword.text = ""
+        self.loginView.textFiledEmail.text = "admin"
+        self.loginView.textFilePassword.text = "123"
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,8 +36,9 @@ class LoginViewController: UIViewController {
     @IBAction func btnHSignInClick(_ sender: Any) {
         if (loginView.textFiledEmail.text == "admin" && loginView.textFilePassword.text == "123") {
             
-            let vc = LoginPassViewController(nibName: "LoginPass", bundle: nil)
-            self.present(vc, animated: true, completion: nil)
+            let vc = ImageListViewController(nibName: "ImageListView", bundle: nil)
+            let navb = UINavigationController(rootViewController: vc)            
+            self.present(navb, animated: true, completion: nil)
         }
         else {
             // create the alert

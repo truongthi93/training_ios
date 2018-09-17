@@ -10,9 +10,10 @@
 		0C4843F21A0F72A867551544 /* Pods_iOSTraning2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31807500C68B684784827D36 /* Pods_iOSTraning2018Tests.framework */; };
 		0E75AA3E100BC64682CB2959 /* Pods_iOSTraning2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B49CFDE32C39DBE041B0B15 /* Pods_iOSTraning2018UITests.framework */; };
 		2FE1BC79E8144840B6EF3476 /* Pods_iOSTraning2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688FA96C65B750A15D1CB2FC /* Pods_iOSTraning2018.framework */; };
-		68BD8E32214F518200405780 /* LoginPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E31214F518200405780 /* LoginPass.swift */; };
-		68BD8E34214F51EB00405780 /* LoginPass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BD8E33214F51EB00405780 /* LoginPass.xib */; };
-		68BD8E36214F520300405780 /* LoginPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E35214F520300405780 /* LoginPassViewController.swift */; };
+		68BD8E32214F518200405780 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E31214F518200405780 /* ImageListView.swift */; };
+		68BD8E34214F51EB00405780 /* ImageListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BD8E33214F51EB00405780 /* ImageListView.xib */; };
+		68BD8E36214F520300405780 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E35214F520300405780 /* ImageListViewController.swift */; };
+		68CCC2E8214FA2CE0091AD84 /* SplashbaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCC2E7214FA2CE0091AD84 /* SplashbaseImage.swift */; };
 		B95728BC214BA5EB0079C09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95728BB214BA5EB0079C09F /* AppDelegate.swift */; };
 		B95728C4214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B95728C2214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld */; };
 		B95728C6214BA5ED0079C09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95728C5214BA5ED0079C09F /* Assets.xcassets */; };
@@ -48,9 +49,10 @@
 		3E8E0393FFAA0AB0ECD81505 /* Pods-iOSTraning2018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018Tests/Pods-iOSTraning2018Tests.release.xcconfig"; sourceTree = "<group>"; };
 		61EF95F0FB310D0B1043AFC5 /* Pods-iOSTraning2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018UITests/Pods-iOSTraning2018UITests.release.xcconfig"; sourceTree = "<group>"; };
 		688FA96C65B750A15D1CB2FC /* Pods_iOSTraning2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTraning2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68BD8E31214F518200405780 /* LoginPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPass.swift; sourceTree = "<group>"; };
-		68BD8E33214F51EB00405780 /* LoginPass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPass.xib; sourceTree = "<group>"; };
-		68BD8E35214F520300405780 /* LoginPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPassViewController.swift; sourceTree = "<group>"; };
+		68BD8E31214F518200405780 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
+		68BD8E33214F51EB00405780 /* ImageListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageListView.xib; sourceTree = "<group>"; };
+		68BD8E35214F520300405780 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		68CCC2E7214FA2CE0091AD84 /* SplashbaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashbaseImage.swift; path = iOSTraning2018/View/SplashbaseImage.swift; sourceTree = SOURCE_ROOT; };
 		6CCCFB6F428FC7BE47A0C5B6 /* Pods-iOSTraning2018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018UITests/Pods-iOSTraning2018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		86FB1B193A4E3565178D516D /* Pods-iOSTraning2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018/Pods-iOSTraning2018.debug.xcconfig"; sourceTree = "<group>"; };
 		B95728B8214BA5EB0079C09F /* iOSTraning2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTraning2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,40 @@
 				3B49CFDE32C39DBE041B0B15 /* Pods_iOSTraning2018UITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68CCC2E3214FA2630091AD84 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B95728F2214BAD710079C09F /* LoginView.xib */,
+				B95728F5214BB0140079C09F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		68CCC2E4214FA2700091AD84 /* ImageList */ = {
+			isa = PBXGroup;
+			children = (
+				68BD8E33214F51EB00405780 /* ImageListView.xib */,
+				68BD8E31214F518200405780 /* ImageListView.swift */,
+			);
+			path = ImageList;
+			sourceTree = "<group>";
+		};
+		68CCC2E5214FA2840091AD84 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B95728F1214BAD710079C09F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		68CCC2E6214FA28C0091AD84 /* ImageList */ = {
+			isa = PBXGroup;
+			children = (
+				68BD8E35214F520300405780 /* ImageListViewController.swift */,
+			);
+			path = ImageList;
 			sourceTree = "<group>";
 		};
 		B95728AF214BA5EB0079C09F = {
@@ -183,8 +219,8 @@
 		B95728EE214BA7E90079C09F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B95728F1214BAD710079C09F /* LoginViewController.swift */,
-				68BD8E35214F520300405780 /* LoginPassViewController.swift */,
+				68CCC2E6214FA28C0091AD84 /* ImageList */,
+				68CCC2E5214FA2840091AD84 /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +228,7 @@
 		B95728EF214BA8590079C09F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				68CCC2E7214FA2CE0091AD84 /* SplashbaseImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,10 +236,8 @@
 		B95728F0214BA8630079C09F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B95728F2214BAD710079C09F /* LoginView.xib */,
-				B95728F5214BB0140079C09F /* LoginView.swift */,
-				68BD8E33214F51EB00405780 /* LoginPass.xib */,
-				68BD8E31214F518200405780 /* LoginPass.swift */,
+				68CCC2E4214FA2700091AD84 /* ImageList */,
+				68CCC2E3214FA2630091AD84 /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,7 +365,7 @@
 			files = (
 				B95728C9214BA5ED0079C09F /* LaunchScreen.storyboard in Resources */,
 				B95728C6214BA5ED0079C09F /* Assets.xcassets in Resources */,
-				68BD8E34214F51EB00405780 /* LoginPass.xib in Resources */,
+				68BD8E34214F51EB00405780 /* ImageListView.xib in Resources */,
 				B95728F4214BAD710079C09F /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,9 +471,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B95728F3214BAD710079C09F /* LoginViewController.swift in Sources */,
-				68BD8E32214F518200405780 /* LoginPass.swift in Sources */,
+				68BD8E32214F518200405780 /* ImageListView.swift in Sources */,
 				B95728BC214BA5EB0079C09F /* AppDelegate.swift in Sources */,
-				68BD8E36214F520300405780 /* LoginPassViewController.swift in Sources */,
+				68BD8E36214F520300405780 /* ImageListViewController.swift in Sources */,
+				68CCC2E8214FA2CE0091AD84 /* SplashbaseImage.swift in Sources */,
 				B95728F6214BB0140079C09F /* LoginView.swift in Sources */,
 				B95728C4214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld in Sources */,
 			);
