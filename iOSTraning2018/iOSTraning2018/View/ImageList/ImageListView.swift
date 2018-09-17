@@ -8,5 +8,7 @@
 
 import UIKit
 class ImageListView: UIView {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
 }

@@ -18,7 +18,28 @@
         <view contentMode="scaleToFill" restorationIdentifier="ImageListView" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="ImageListView" customModule="iOSTraning2018" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-L6-3QR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N3p-tX-FZc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="guJ-L6-3QR" secondAttribute="bottom" id="cWc-jQ-c8q"/>
+                <constraint firstItem="guJ-L6-3QR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fJ3-fI-Vq4"/>
+                <constraint firstItem="guJ-L6-3QR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iOh-s9-Fco"/>
+                <constraint firstAttribute="trailing" secondItem="guJ-L6-3QR" secondAttribute="trailing" id="pFc-E3-1SF"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="guJ-L6-3QR" id="VWG-Pr-I9p"/>
+            </connections>
         </view>
     </objects>
 </document>
