@@ -9,10 +9,14 @@
 import UIKit
 
 class LoginPassViewController: UIViewController {
+    public var loginPassView: LoginPass! {
+        guard isViewLoaded else { return nil }
+        return view as! LoginPass
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loginPassView.viewA.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
 

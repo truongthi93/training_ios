@@ -8,5 +8,6 @@
 
 import UIKit
 class LoginPass: UIView {
+    @IBOutlet weak var viewA: UIView!
     
 }
