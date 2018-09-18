@@ -80,6 +80,8 @@ extension ImageListViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell",for:indexPath as IndexPath) as! ImageCollectionViewCell
         if let image = imageList[indexPath.row].url {
             cell.imageView.imageFromUrl(urlString: image)
+        } else {
+            cell.imageView.image = UIImage(named: "go")
         }
         
         return cell
