@@ -38,18 +38,7 @@ class LoginViewController: UIViewController {
             self.present(navb, animated: true, completion: nil)
         }
         else {
-            self.showAlert()
+            Utility.showAlert(message: "Email or Password incorrect", context: self)
         }
-    }
-    
-    func showAlert() {
-        // create the alert
-        let alert = UIAlertController(title: "", message: "Email or Password incorrect", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
     }
 }

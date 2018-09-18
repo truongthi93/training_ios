@@ -28,7 +28,13 @@ class ImageListViewController: UIViewController {
         
         imageListView.collectionView.register(UINib.init(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
 
-        self.getImageFromAPI()
+        self.getImageFromAPI { (success) in
+            if success {
+                self.imageListView.collectionView.reloadData()
+            } else {
+                Utility.showAlert(message: "Get data fail", context: self)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,16 +51,15 @@ class ImageListViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func getImageFromAPI() {
+    func getImageFromAPI(completion: @escaping (_ result: Bool) -> Void) {
         let URL = "http://www.splashbase.co/api/v1/images/latest"
-        
         Alamofire.request(URL).responseArray(keyPath: "images") { (response: DataResponse<[SplashbaseImage]>) in
-            
             let forecastArray = response.result.value
-            
             if let forecastArray = forecastArray {
                 self.imageList = forecastArray
-                self.imageListView.collectionView.reloadData()
+                completion(true)
+            } else {
+                completion(false)
             }
         }
     }
