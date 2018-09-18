@@ -13,11 +13,26 @@ class Constants{
     static let correct_email = "admin"
     static let correct_password = "123"
     
+    // ShowAlet
+    static let showAletLoginFail = "Email or Password incorrect"
+    static let showAletAPIFail = "Get data fail"
+    
+    // Link API
+    static let linkImage = "http://www.splashbase.co/api/v1/images/latest"
     
     // Nib name
-    
-    
-    // Message
+    static let nameImageListView = "ImageListView"
+    static let nameImageCollectionViewCell = "ImageCollectionViewCell"
+    static let keyPathAlamofire = "images"
     
     // Screen title
+    static let titleImageListView = "Image"
+    static let titleUIBarButtonItem = "Logout"
+    
+    // Name Image
+    static let nameImageGoogle = "go"
+    
+    // Name UserDefault
+    static let nameUserDefaultLoginEmail = "loginEmail"
+    static let nameUserDefaultLoginPass = "loginPass"
 }

@@ -26,13 +26,13 @@ class ImageListViewController: UIViewController {
 
         self.setUpNavigationBar()
         
-        imageListView.collectionView.register(UINib.init(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        imageListView.collectionView.register(UINib.init(nibName: Constants.nameImageCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.nameImageCollectionViewCell)
 
         self.getImageFromAPI { (success) in
             if success {
                 self.imageListView.collectionView.reloadData()
             } else {
-                Utility.showAlert(message: "Get data fail", context: self)
+                Utility.showAlert(message: Constants.showAletAPIFail, context: self)
             }
         }
     }
@@ -42,8 +42,8 @@ class ImageListViewController: UIViewController {
     }
     
     func setUpNavigationBar() {
-        self.navigationItem.title = "Images"
-        let logout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(ImageListViewController.logout))
+        self.navigationItem.title = Constants.titleImageListView
+        let logout = UIBarButtonItem(title: Constants.titleUIBarButtonItem, style: .plain, target: self, action: #selector(ImageListViewController.logout))
         self.navigationItem.rightBarButtonItem  = logout
     }
     
@@ -52,8 +52,9 @@ class ImageListViewController: UIViewController {
     }
     
     func getImageFromAPI(completion: @escaping (_ result: Bool) -> Void) {
-        let URL = "http://www.splashbase.co/api/v1/images/latest"
-        Alamofire.request(URL).responseArray(keyPath: "images") { (response: DataResponse<[SplashbaseImage]>) in
+        let URL = Constants.linkImage
+        let sv = UIViewController.displaySpinner(onView: self.view)
+        Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[SplashbaseImage]>) in
             let forecastArray = response.result.value
             if let forecastArray = forecastArray {
                 self.imageList = forecastArray
@@ -61,6 +62,8 @@ class ImageListViewController: UIViewController {
             } else {
                 completion(false)
             }
+            
+            UIViewController.removeSpinner(spinner: sv)
         }
     }
 }
@@ -77,11 +80,11 @@ extension ImageListViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell",for:indexPath as IndexPath) as! ImageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.nameImageCollectionViewCell,for:indexPath as IndexPath) as! ImageCollectionViewCell
         if let image = imageList[indexPath.row].url {
             cell.imageView.imageFromUrl(urlString: image)
         } else {
-            cell.imageView.image = UIImage(named: "go")
+            cell.imageView.image = UIImage(named: Constants.nameImageGoogle)
         }
         
         return cell

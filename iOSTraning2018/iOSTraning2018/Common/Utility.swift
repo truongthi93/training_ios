@@ -11,7 +11,7 @@ import UIKit
 class Utility {
     class func showAlert(message: String, context: UIViewController) {
     // create the alert
-    let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertControllerStyle.alert)
+    let alert = UIAlertController(title: "Message", message: message, preferredStyle: UIAlertControllerStyle.alert)
     
     // add an action (button)
     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

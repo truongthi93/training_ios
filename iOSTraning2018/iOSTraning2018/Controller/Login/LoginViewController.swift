@@ -16,12 +16,19 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //Todo: Get userdefault email and password
+        
+            let returnValueEmail: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginEmail) ?? ""
+            let returnValuePass: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginPass) ?? ""
 
+            loginView.textFiledEmail.text = returnValueEmail
+            loginView.textFilePassword.text = returnValuePass
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+  
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,13 +38,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnHSignInClick(_ sender: Any) {
         if (loginView.textFiledEmail.text == Constants.correct_email && loginView.textFilePassword.text == Constants.correct_password) {
+            
             // Todo: Save to userdefault email and password
-            let vc = ImageListViewController(nibName: "ImageListView", bundle: nil)
+            UserDefaults.standard.setValue(loginView.textFiledEmail.text, forKey: Constants.nameUserDefaultLoginEmail)
+            UserDefaults.standard.setValue(loginView.textFilePassword.text, forKey: Constants.nameUserDefaultLoginPass)
+            
+            let vc = ImageListViewController(nibName: Constants.nameImageListView, bundle: nil)
             let navb = UINavigationController(rootViewController: vc)            
             self.present(navb, animated: true, completion: nil)
         }
         else {
-            Utility.showAlert(message: "Email or Password incorrect", context: self)
+            Utility.showAlert(message: Constants.showAletLoginFail, context: self)
         }
     }
 }
