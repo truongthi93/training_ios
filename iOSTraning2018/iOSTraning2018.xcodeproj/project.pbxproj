@@ -25,6 +25,8 @@
 		B95728F3214BAD710079C09F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95728F1214BAD710079C09F /* LoginViewController.swift */; };
 		B95728F4214BAD710079C09F /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95728F2214BAD710079C09F /* LoginView.xib */; };
 		B95728F6214BB0140079C09F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95728F5214BB0140079C09F /* LoginView.swift */; };
+		B97466A02150EC0D004165A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B974669F2150EC0D004165A9 /* Constants.swift */; };
+		B97466A22150EEC9004165A9 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97466A12150EEC9004165A9 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		B95728F1214BAD710079C09F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B95728F2214BAD710079C09F /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		B95728F5214BB0140079C09F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B974669F2150EC0D004165A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B97466A12150EEC9004165A9 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		DF2CB3AC51B944ABBD2B45E6 /* Pods-iOSTraning2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018Tests/Pods-iOSTraning2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +188,9 @@
 		B95728BA214BA5EB0079C09F /* iOSTraning2018 */ = {
 			isa = PBXGroup;
 			children = (
+				B974669E2150EB8B004165A9 /* Service */,
+				B974669D2150EB80004165A9 /* Extension */,
+				B974669C2150EB5A004165A9 /* Common */,
 				B95728F0214BA8630079C09F /* View */,
 				B95728EF214BA8590079C09F /* Model */,
 				B95728EE214BA7E90079C09F /* Controller */,
@@ -254,6 +261,29 @@
 				68CCC2E3214FA2630091AD84 /* Login */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B974669C2150EB5A004165A9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B974669F2150EC0D004165A9 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B974669D2150EB80004165A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B97466A12150EEC9004165A9 /* UIImageViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B974669E2150EB8B004165A9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C83E0724B48D3D7013E99F82 /* Pods */ = {
@@ -487,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97466A22150EEC9004165A9 /* UIImageViewExtension.swift in Sources */,
 				B95728F3214BAD710079C09F /* LoginViewController.swift in Sources */,
 				68BD8E32214F518200405780 /* ImageListView.swift in Sources */,
 				68CCC2F0214FB6AB0091AD84 /* ImageCollectionViewCell.swift in Sources */,
@@ -495,6 +526,7 @@
 				68CCC2E8214FA2CE0091AD84 /* SplashbaseImage.swift in Sources */,
 				B95728F6214BB0140079C09F /* LoginView.swift in Sources */,
 				B95728C4214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld in Sources */,
+				B97466A02150EC0D004165A9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

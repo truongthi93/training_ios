@@ -16,16 +16,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        isEnbale show password
-//        textFiledPasswordClick.isSecureTextEntry = true
-        // Do any additional setup after loading the view.
+        //Todo: Get userdefault email and password
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loginView.textFiledEmail.text = "admin"
-        self.loginView.textFilePassword.text = "123"
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,33 +31,25 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnHSignInClick(_ sender: Any) {
-        if (loginView.textFiledEmail.text == "admin" && loginView.textFilePassword.text == "123") {
-            
+        if (loginView.textFiledEmail.text == Constants.correct_email && loginView.textFilePassword.text == Constants.correct_password) {
+            // Todo: Save to userdefault email and password
             let vc = ImageListViewController(nibName: "ImageListView", bundle: nil)
             let navb = UINavigationController(rootViewController: vc)            
             self.present(navb, animated: true, completion: nil)
         }
         else {
-            // create the alert
-            let alert = UIAlertController(title: "", message: "Email or Password incorrect", preferredStyle: UIAlertControllerStyle.alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
+            self.showAlert()
         }
-        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showAlert() {
+        // create the alert
+        let alert = UIAlertController(title: "", message: "Email or Password incorrect", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
-    */
-
 }

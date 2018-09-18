@@ -24,10 +24,7 @@ class ImageListViewController: UIViewController {
         self.imageListView.collectionView.delegate = self
         self.imageListView.collectionView.dataSource = self
 
-        self.navigationItem.title = "Images"
-        
-        let logout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(ImageListViewController.logout))
-        self.navigationItem.rightBarButtonItem  = logout
+        self.setUpNavigationBar()
         
         imageListView.collectionView.register(UINib.init(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
 
@@ -36,6 +33,12 @@ class ImageListViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setUpNavigationBar() {
+        self.navigationItem.title = "Images"
+        let logout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(ImageListViewController.logout))
+        self.navigationItem.rightBarButtonItem  = logout
     }
     
     @objc func logout() {
@@ -80,23 +83,9 @@ extension ImageListViewController : UICollectionViewDataSource {
 
 // MARK:- UICollectionViewDelegate Methods
 extension ImageListViewController : UICollectionViewDelegate {
-    
     private func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
     }
     
     private func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: IndexPath) {
-    }
-}
-
-extension UIImageView {
-    public func imageFromUrl(urlString: String) {
-        if let url = URL(string: urlString) {
-            let request = URLRequest(url: url)
-            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: .main, completionHandler: { (response, data, error) in
-                if let imageData = data as NSData? {
-                    self.image = UIImage(data: imageData as Data)
-                }
-            })
-        }
     }
 }
