@@ -20,7 +20,6 @@ extension UIViewController {
             spinnerView.addSubview(ai)
             onView.addSubview(spinnerView)
         }
-        
         return spinnerView
     }
     
