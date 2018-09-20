@@ -28,11 +28,17 @@ class ImageListViewController: UIViewController {
         
         imageListView.collectionView.register(UINib.init(nibName: Constants.nameImageCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.nameImageCollectionViewCell)
 
-        self.getImageFromAPI { (success) in
-            if success {
-                self.imageListView.collectionView.reloadData()
-            } else {
-                Utility.showAlert(message: Constants.showAletAPIFail, context: self)
+        if let fetchData = CoreDataImage.shared.fetchData(),
+            fetchData.count > 0{
+            self.imageList = fetchData
+            self.imageListView.collectionView.reloadData()
+        } else {
+            self.getImageFromAPI { (success) in
+                if success {
+                    self.imageListView.collectionView.reloadData()
+                } else {
+                    Utility.showAlert(message: Constants.showAletAPIFail, context: self)
+                }
             }
         }
     }
@@ -43,14 +49,22 @@ class ImageListViewController: UIViewController {
     
     func setUpNavigationBar() {
         self.navigationItem.title = Constants.titleImageListView
-        let logout = UIBarButtonItem(title: Constants.titleUIBarButtonItem, style: .plain, target: self, action: #selector(ImageListViewController.logout))
+        let logout = UIBarButtonItem(title: Constants.titleUIRightBarButtonItem, style: .plain, target: self, action: #selector(ImageListViewController.logout))
         self.navigationItem.rightBarButtonItem  = logout
+        
+        self.navigationItem.title = Constants.titleImageListView
+        let delete = UIBarButtonItem(title: Constants.titleUILeftBarButtonItem, style: .plain, target: self, action: #selector(ImageListViewController.deleteAllLocal))
+        self.navigationItem.leftBarButtonItem  = delete
     }
     
     @objc func logout() {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @objc func deleteAllLocal() {
+        CoreDataImage.shared.deleteData()
+    }
+
     func getImageFromAPI(completion: @escaping (_ result: Bool) -> Void) {
         let URL = Constants.linkImage
         let sv = UIViewController.displaySpinner(onView: self.view)
@@ -58,6 +72,8 @@ class ImageListViewController: UIViewController {
             let forecastArray = response.result.value
             if let forecastArray = forecastArray {
                 self.imageList = forecastArray
+                // Save to database
+                CoreDataImage.shared.saveData(list: forecastArray)
                 completion(true)
             } else {
                 completion(false)

@@ -11,6 +11,7 @@
 		0E75AA3E100BC64682CB2959 /* Pods_iOSTraning2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B49CFDE32C39DBE041B0B15 /* Pods_iOSTraning2018UITests.framework */; };
 		2FE1BC79E8144840B6EF3476 /* Pods_iOSTraning2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688FA96C65B750A15D1CB2FC /* Pods_iOSTraning2018.framework */; };
 		680E4B4E21510AF100A86F40 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680E4B4D21510AF100A86F40 /* UIViewControllerExtension.swift */; };
+		68A529E821534F4F00B0AD60 /* CoreDataImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A529E721534F4F00B0AD60 /* CoreDataImage.swift */; };
 		68BD8E32214F518200405780 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E31214F518200405780 /* ImageListView.swift */; };
 		68BD8E34214F51EB00405780 /* ImageListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BD8E33214F51EB00405780 /* ImageListView.xib */; };
 		68BD8E36214F520300405780 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E35214F520300405780 /* ImageListViewController.swift */; };
@@ -56,6 +57,7 @@
 		61EF95F0FB310D0B1043AFC5 /* Pods-iOSTraning2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018UITests/Pods-iOSTraning2018UITests.release.xcconfig"; sourceTree = "<group>"; };
 		680E4B4D21510AF100A86F40 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		688FA96C65B750A15D1CB2FC /* Pods_iOSTraning2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTraning2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A529E721534F4F00B0AD60 /* CoreDataImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImage.swift; sourceTree = "<group>"; };
 		68BD8E31214F518200405780 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		68BD8E33214F51EB00405780 /* ImageListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageListView.xib; sourceTree = "<group>"; };
 		68BD8E35214F520300405780 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 				3B49CFDE32C39DBE041B0B15 /* Pods_iOSTraning2018UITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68A529E621534F1900B0AD60 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				68A529E721534F4F00B0AD60 /* CoreDataImage.swift */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		68CCC2E3214FA2630091AD84 /* Login */ = {
@@ -192,6 +202,7 @@
 		B95728BA214BA5EB0079C09F /* iOSTraning2018 */ = {
 			isa = PBXGroup;
 			children = (
+				68A529E621534F1900B0AD60 /* DataStore */,
 				B974669E2150EB8B004165A9 /* Service */,
 				B974669D2150EB80004165A9 /* Extension */,
 				B974669C2150EB5A004165A9 /* Common */,
@@ -532,6 +543,7 @@
 				68BD8E36214F520300405780 /* ImageListViewController.swift in Sources */,
 				68CCC2E8214FA2CE0091AD84 /* SplashbaseImage.swift in Sources */,
 				680E4B4E21510AF100A86F40 /* UIViewControllerExtension.swift in Sources */,
+				68A529E821534F4F00B0AD60 /* CoreDataImage.swift in Sources */,
 				B95728F6214BB0140079C09F /* LoginView.swift in Sources */,
 				B95728C4214BA5EB0079C09F /* iOSTraning2018.xcdatamodeld in Sources */,
 				B97466A02150EC0D004165A9 /* Constants.swift in Sources */,

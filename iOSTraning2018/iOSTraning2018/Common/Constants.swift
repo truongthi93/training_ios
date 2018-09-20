@@ -31,8 +31,9 @@ class Constants{
     
     // Screen title
     static let titleImageListView = "Image"
-    static let titleUIBarButtonItem = "Logout"
-    
+    static let titleUIRightBarButtonItem = "Logout"
+    static let titleUILeftBarButtonItem = "Delete"
+
     // Name Image
     static let nameImageGoogle = "go"
     

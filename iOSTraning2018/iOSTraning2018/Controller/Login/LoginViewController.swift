@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Todo: Get userdefault email and password
         
             let returnValueEmail: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginEmail) ?? ""
