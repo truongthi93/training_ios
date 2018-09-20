@@ -69,6 +69,8 @@ class ImageListViewController: UIViewController {
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
             CoreDataImage.shared.deleteData()
+            self.imageList.removeAll()
+            self.imageListView.collectionView.reloadData()
         })
         
         // Create Cancel button with action handlder
@@ -88,6 +90,9 @@ class ImageListViewController: UIViewController {
     func getImageFromAPI(completion: @escaping (_ result: Bool) -> Void) {
         let URL = Constants.linkImage
         let sv = UIViewController.displaySpinner(onView: self.view)
+        
+        
+        
         Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[SplashbaseImage]>) in
             let forecastArray = response.result.value
             if let forecastArray = forecastArray {
