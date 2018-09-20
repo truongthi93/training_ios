@@ -62,7 +62,30 @@ class ImageListViewController: UIViewController {
     }
     
     @objc func deleteAllLocal() {
-        CoreDataImage.shared.deleteData()
+        // Declare Alert message
+        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            CoreDataImage.shared.deleteData()
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+//        Utility.showAlert(message: "are you sure?", context: self)
+//            CoreDataImage.shared.deleteData()
+        
+        
     }
 
     func getImageFromAPI(completion: @escaping (_ result: Bool) -> Void) {
