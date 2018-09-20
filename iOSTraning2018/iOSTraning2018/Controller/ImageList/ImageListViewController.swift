@@ -82,9 +82,6 @@ class ImageListViewController: UIViewController {
         
         // Present dialog message to user
         self.present(dialogMessage, animated: true, completion: nil)
-//        Utility.showAlert(message: "are you sure?", context: self)
-//            CoreDataImage.shared.deleteData()
-        
         
     }
 
