@@ -9,7 +9,7 @@ target 'iOSTraning2018' do
   pod 'SwiftyJSON'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
-
+  pod 'RealmSwift'
   # Pods for iOSTraning2018
 
   target 'iOSTraning2018Tests' do
