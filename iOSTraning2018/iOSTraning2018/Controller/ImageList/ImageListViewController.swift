@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
+import Realm
+import RealmSwift
 
 class ImageListViewController: UIViewController {
     
@@ -17,7 +19,7 @@ class ImageListViewController: UIViewController {
         guard isViewLoaded else { return nil }
         return view as! ImageListView
     }
-    var imageList : [SplashbaseImage] = []
+    var imageList : [RealmImageModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class ImageListViewController: UIViewController {
         
         imageListView.collectionView.register(UINib.init(nibName: Constants.nameImageCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.nameImageCollectionViewCell)
 
-        if let fetchData = CoreDataImage.shared.fetchData(),
+        if let fetchData = RealmDataImage.sharedInstance.fetchData(),
             fetchData.count > 0{
             self.imageList = fetchData
             self.imageListView.collectionView.reloadData()
@@ -68,7 +70,7 @@ class ImageListViewController: UIViewController {
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
-            CoreDataImage.shared.deleteData()
+            RealmDataImage.sharedInstance.deleteData()
             self.imageList.removeAll()
             self.imageListView.collectionView.reloadData()
         })
@@ -93,12 +95,13 @@ class ImageListViewController: UIViewController {
         
         
         
-        Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[SplashbaseImage]>) in
+        Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[RealmImageModel]>) in
             let forecastArray = response.result.value
             if let forecastArray = forecastArray {
                 self.imageList = forecastArray
                 // Save to database
-                CoreDataImage.shared.saveData(list: forecastArray)
+                RealmDataImage.sharedInstance.saveData(list: forecastArray)
+                
                 completion(true)
             } else {
                 completion(false)
