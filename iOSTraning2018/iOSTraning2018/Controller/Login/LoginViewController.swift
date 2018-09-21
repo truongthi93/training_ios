@@ -42,6 +42,11 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.setValue(loginView.textFiledEmail.text, forKey: Constants.nameUserDefaultLoginEmail)
             UserDefaults.standard.setValue(loginView.textFilePassword.text, forKey: Constants.nameUserDefaultLoginPass)
             
+            CRUDFile().WriteFile(fileName: "UserPass.txt",text: (loginView.textFiledEmail.text ?? "") + (loginView.textFilePassword.text ?? ""))
+
+            let a = CRUDFile().ReadFile(fileName: "UserPass.txt")
+            print(a)
+            
             let vc = ImageListViewController(nibName: Constants.nameImageListView, bundle: nil)
             let navb = UINavigationController(rootViewController: vc)            
             self.present(navb, animated: true, completion: nil)
@@ -51,3 +56,4 @@ class LoginViewController: UIViewController {
         }
     }
 }
+

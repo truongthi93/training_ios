@@ -23,30 +23,34 @@ class CRUDFile{
         }
     }
     
-    func WriteFile(fileName: String, text: String) {
-        // Set the file path
-//        let path = "myfile.txt"
-        // Set the contents
-//        let contents = "Here are my file's contents"
-        do {
-            // Write contents to file
-            try text.write(toFile: fileName, atomically: false, encoding: String.Encoding.utf8)
-        }
-        catch let error as NSError {
-            print("Ooops! Something went wrong: \(error)")
-        }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
-    func ReadFile(fileName: String) {
-        // Set the file path
-//        let path = "myfile.txt"
+    
+    func WriteFile(fileName: String, text: String) {
+        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return }
+        let writePath = NSURL(fileURLWithPath: path)
+        try? FileManager.default.createDirectory(atPath: writePath.path!, withIntermediateDirectories: true)
+        let file = writePath.appendingPathComponent(fileName)
+        try? text.write(to: file!, atomically: false, encoding: String.Encoding.utf8)
+    }
+    
+    func ReadFile(fileName:String) -> String {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+        let path = documentsPath.appendingPathComponent(fileName)
+        let checkValidation = FileManager.default
+        var file:String
         
-        do {
-            // Get the contents
-            let contents = try NSString(contentsOfFile: fileName, encoding: String.Encoding.utf8.rawValue)
-            print(contents)
+        if checkValidation.fileExists(atPath: path) {
+            do{
+                try file = NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue) as String
+            }catch{
+                file = ""
+            }
+        } else {
+            file = ""
         }
-        catch let error as NSError {
-            print("Ooops! Something went wrong: \(error)")
-        }
+        return file
     }
 }
