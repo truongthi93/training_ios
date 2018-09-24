@@ -10,9 +10,9 @@ import UIKit
 import ObjectMapper
 
 class SplashbaseImage : NSObject,Mappable{
-    var id : String? = ""
-    var large_url : String? = ""
-    var url : String? = ""
+    var id : String? = Constants.stringNil
+    var large_url : String? = Constants.stringNil
+    var url : String? = Constants.stringNil
     
     override init() {
     }
@@ -22,8 +22,8 @@ class SplashbaseImage : NSObject,Mappable{
     
     // Mappable
     func mapping(map: Map) {
-        id <- map["id"]
-        large_url <- map["large_url"]
-        url <- map["url"]
+        id <- map[Constants.nameDataAPIId]
+        large_url <- map[Constants.nameDataAPILarge_url]
+        url <- map[Constants.nameDataAPIUrl]
     }
 }

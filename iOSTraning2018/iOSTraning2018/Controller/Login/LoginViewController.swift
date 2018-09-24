@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         //Todo: Get userdefault email and password
         
-            let returnValueEmail: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginEmail) ?? ""
-            let returnValuePass: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginPass) ?? ""
+            let returnValueEmail: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginEmail) ?? Constants.stringNil
+            let returnValuePass: String = UserDefaults.standard.string(forKey: Constants.nameUserDefaultLoginPass) ?? Constants.stringNil
 
             loginView.textFiledEmail.text = returnValueEmail
             loginView.textFilePassword.text = returnValuePass
@@ -42,9 +42,9 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.setValue(loginView.textFiledEmail.text, forKey: Constants.nameUserDefaultLoginEmail)
             UserDefaults.standard.setValue(loginView.textFilePassword.text, forKey: Constants.nameUserDefaultLoginPass)
             
-            CRUDFile().WriteFile(fileName: "UserPass.txt",text: (loginView.textFiledEmail.text ?? "") + (loginView.textFilePassword.text ?? ""))
+            CRUDFile().WriteFile(fileName: Constants.fileNameCRUD,text: (loginView.textFiledEmail.text ?? Constants.stringNil) + (loginView.textFilePassword.text ?? Constants.stringNil))
 
-            let a = CRUDFile().ReadFile(fileName: "UserPass.txt")
+            let a = CRUDFile().ReadFile(fileName: Constants.fileNameCRUD)
             print(a)
             
             let vc = ImageListViewController(nibName: Constants.nameImageListView, bundle: nil)

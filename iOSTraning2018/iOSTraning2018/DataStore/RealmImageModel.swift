@@ -12,8 +12,8 @@ import RealmSwift
 import Realm
 
 class RealmImageModel : Object, Mappable{
-    @objc dynamic var large_url : String? = ""
-    @objc dynamic var url : String? = ""
+    @objc dynamic var large_url : String? = Constants.stringNil
+    @objc dynamic var url : String? = Constants.stringNil
     
     required init(realm: RLMRealm, schema: RLMObjectSchema) {
         super.init()
@@ -33,8 +33,8 @@ class RealmImageModel : Object, Mappable{
     
     // Mappable
     func mapping(map: Map) {
-        large_url <- map["large_url"]
-        url <- map["url"]
+        large_url <- map[Constants.nameDataAPILarge_url]
+        url <- map[Constants.nameDataAPIUrl]
     }
 
 }

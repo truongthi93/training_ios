@@ -65,19 +65,17 @@ class ImageListViewController: UIViewController {
     
     @objc func deleteAllLocal() {
         // Declare Alert message
-        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
+        let dialogMessage = UIAlertController(title: Constants.titleShowAletMessage, message: Constants.showAletDeleteImage, preferredStyle: .alert)
         
         // Create OK button with action handler
-        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
+        let ok = UIAlertAction(title: Constants.buttonShowAletOK, style: .default, handler: { (action) -> Void in
             RealmDataImage.sharedInstance.deleteData()
             self.imageList.removeAll()
             self.imageListView.collectionView.reloadData()
         })
         
         // Create Cancel button with action handlder
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-            print("Cancel button tapped")
+        let cancel = UIAlertAction(title: Constants.buttonShowAletCancel, style: .cancel) { (action) -> Void in
         }
         
         //Add OK and Cancel button to dialog message

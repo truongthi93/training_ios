@@ -30,10 +30,10 @@ class RealmDataImage {
                         realm.add(item)
                     }
                 } catch {
-                    print("Save fail")
+                    print(Constants.showPrintSaveDataFail)
                 }
             } catch {
-                print("Save fail")
+                print(Constants.showPrintSaveDataFail)
             }
         }
     }

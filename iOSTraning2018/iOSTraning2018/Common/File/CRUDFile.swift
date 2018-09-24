@@ -46,10 +46,10 @@ class CRUDFile{
             do{
                 try file = NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue) as String
             }catch{
-                file = ""
+                file = Constants.stringNil
             }
         } else {
-            file = ""
+            file = Constants.stringNil
         }
         return file
     }
