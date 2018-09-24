@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
             self.present(navb, animated: true, completion: nil)
         }
         else {
-            Utility.showAlert(message: Constants.showAletLoginFail, context: self)
+            Utility.showAlert(message: Constants.showAlertLoginFail, context: self)
         }
     }
 }

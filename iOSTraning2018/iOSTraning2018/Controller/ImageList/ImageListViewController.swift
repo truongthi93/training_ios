@@ -39,7 +39,7 @@ class ImageListViewController: UIViewController {
                 if success {
                     self.imageListView.collectionView.reloadData()
                 } else {
-                    Utility.showAlert(message: Constants.showAletAPIFail, context: self)
+                    Utility.showAlert(message: Constants.showAlertAPIFail, context: self)
                 }
             }
         }
@@ -65,17 +65,17 @@ class ImageListViewController: UIViewController {
     
     @objc func deleteAllLocal() {
         // Declare Alert message
-        let dialogMessage = UIAlertController(title: Constants.titleShowAletMessage, message: Constants.showAletDeleteImage, preferredStyle: .alert)
+        let dialogMessage = UIAlertController(title: Constants.titleShowAlertMessage, message: Constants.showAlertDeleteImage, preferredStyle: .alert)
         
         // Create OK button with action handler
-        let ok = UIAlertAction(title: Constants.buttonShowAletOK, style: .default, handler: { (action) -> Void in
+        let ok = UIAlertAction(title: Constants.buttonShowAlertOK, style: .default, handler: { (action) -> Void in
             RealmDataImage.sharedInstance.deleteData()
             self.imageList.removeAll()
             self.imageListView.collectionView.reloadData()
         })
         
         // Create Cancel button with action handlder
-        let cancel = UIAlertAction(title: Constants.buttonShowAletCancel, style: .cancel) { (action) -> Void in
+        let cancel = UIAlertAction(title: Constants.buttonShowAlertCancel, style: .cancel) { (action) -> Void in
         }
         
         //Add OK and Cancel button to dialog message

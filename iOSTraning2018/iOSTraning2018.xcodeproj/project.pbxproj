@@ -139,13 +139,13 @@
 			path = File;
 			sourceTree = "<group>";
 		};
-		68A529E621534F1900B0AD60 /* DataStore */ = {
+		68A529E621534F1900B0AD60 /* DataStorage */ = {
 			isa = PBXGroup;
 			children = (
 				68A529E721534F4F00B0AD60 /* CoreDataImage.swift */,
 				68A510382154899600436952 /* RealmDataImage.swift */,
 			);
-			path = DataStore;
+			path = DataStorage;
 			sourceTree = "<group>";
 		};
 		68CCC2E3214FA2630091AD84 /* Login */ = {
@@ -217,7 +217,7 @@
 		B95728BA214BA5EB0079C09F /* iOSTraning2018 */ = {
 			isa = PBXGroup;
 			children = (
-				68A529E621534F1900B0AD60 /* DataStore */,
+				68A529E621534F1900B0AD60 /* DataStorage */,
 				B974669E2150EB8B004165A9 /* Service */,
 				B974669D2150EB80004165A9 /* Extension */,
 				B974669C2150EB5A004165A9 /* Common */,
@@ -783,6 +783,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSTraning2018Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -804,6 +805,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSTraning2018Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -824,6 +826,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSTraning2018UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -844,6 +847,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSTraning2018UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
