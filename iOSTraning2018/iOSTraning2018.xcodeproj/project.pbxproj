@@ -12,13 +12,13 @@
 		2FE1BC79E8144840B6EF3476 /* Pods_iOSTraning2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688FA96C65B750A15D1CB2FC /* Pods_iOSTraning2018.framework */; };
 		680E4B4E21510AF100A86F40 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680E4B4D21510AF100A86F40 /* UIViewControllerExtension.swift */; };
 		68A510392154899600436952 /* RealmDataImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A510382154899600436952 /* RealmDataImage.swift */; };
-		68A5103D2154A1A100436952 /* RealmImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A5103C2154A1A100436952 /* RealmImageModel.swift */; };
 		68A510402154EB1300436952 /* CRUDFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A5103F2154EB1300436952 /* CRUDFile.swift */; };
 		68A529E821534F4F00B0AD60 /* CoreDataImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A529E721534F4F00B0AD60 /* CoreDataImage.swift */; };
+		68B68E422159E0AF00E241CB /* RealmImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B68E402159E0AF00E241CB /* RealmImageModel.swift */; };
+		68B68E432159E0AF00E241CB /* SplashbaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B68E412159E0AF00E241CB /* SplashbaseImage.swift */; };
 		68BD8E32214F518200405780 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E31214F518200405780 /* ImageListView.swift */; };
 		68BD8E34214F51EB00405780 /* ImageListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BD8E33214F51EB00405780 /* ImageListView.xib */; };
 		68BD8E36214F520300405780 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD8E35214F520300405780 /* ImageListViewController.swift */; };
-		68CCC2E8214FA2CE0091AD84 /* SplashbaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCC2E7214FA2CE0091AD84 /* SplashbaseImage.swift */; };
 		68CCC2F0214FB6AB0091AD84 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCC2EE214FB6AB0091AD84 /* ImageCollectionViewCell.swift */; };
 		68CCC2F1214FB6AB0091AD84 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CCC2EF214FB6AB0091AD84 /* ImageCollectionViewCell.xib */; };
 		B95728BC214BA5EB0079C09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95728BB214BA5EB0079C09F /* AppDelegate.swift */; };
@@ -61,13 +61,13 @@
 		680E4B4D21510AF100A86F40 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		688FA96C65B750A15D1CB2FC /* Pods_iOSTraning2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTraning2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A510382154899600436952 /* RealmDataImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataImage.swift; sourceTree = "<group>"; };
-		68A5103C2154A1A100436952 /* RealmImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmImageModel.swift; path = iOSTraning2018/DataStore/RealmImageModel.swift; sourceTree = SOURCE_ROOT; };
 		68A5103F2154EB1300436952 /* CRUDFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDFile.swift; sourceTree = "<group>"; };
 		68A529E721534F4F00B0AD60 /* CoreDataImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImage.swift; sourceTree = "<group>"; };
+		68B68E402159E0AF00E241CB /* RealmImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmImageModel.swift; sourceTree = "<group>"; };
+		68B68E412159E0AF00E241CB /* SplashbaseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashbaseImage.swift; sourceTree = "<group>"; };
 		68BD8E31214F518200405780 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		68BD8E33214F51EB00405780 /* ImageListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageListView.xib; sourceTree = "<group>"; };
 		68BD8E35214F520300405780 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
-		68CCC2E7214FA2CE0091AD84 /* SplashbaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashbaseImage.swift; path = iOSTraning2018/View/SplashbaseImage.swift; sourceTree = SOURCE_ROOT; };
 		68CCC2EE214FB6AB0091AD84 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		68CCC2EF214FB6AB0091AD84 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		6CCCFB6F428FC7BE47A0C5B6 /* Pods-iOSTraning2018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTraning2018UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTraning2018UITests/Pods-iOSTraning2018UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +148,16 @@
 			path = DataStorage;
 			sourceTree = "<group>";
 		};
+		68B68E3F2159E0A000E241CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68B68E402159E0AF00E241CB /* RealmImageModel.swift */,
+				68B68E412159E0AF00E241CB /* SplashbaseImage.swift */,
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		68CCC2E3214FA2630091AD84 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,12 +227,12 @@
 		B95728BA214BA5EB0079C09F /* iOSTraning2018 */ = {
 			isa = PBXGroup;
 			children = (
+				68B68E3F2159E0A000E241CB /* Model */,
 				68A529E621534F1900B0AD60 /* DataStorage */,
 				B974669E2150EB8B004165A9 /* Service */,
 				B974669D2150EB80004165A9 /* Extension */,
 				B974669C2150EB5A004165A9 /* Common */,
 				B95728F0214BA8630079C09F /* View */,
-				B95728EF214BA8590079C09F /* Model */,
 				B95728EE214BA7E90079C09F /* Controller */,
 				B95728EC214BA6900079C09F /* Application Delegate */,
 				B95728ED214BA75B0079C09F /* Supporting Files */,
@@ -274,15 +284,6 @@
 				68CCC2E5214FA2840091AD84 /* Login */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		B95728EF214BA8590079C09F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				68CCC2E7214FA2CE0091AD84 /* SplashbaseImage.swift */,
-				68A5103C2154A1A100436952 /* RealmImageModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B95728F0214BA8630079C09F /* View */ = {
@@ -558,14 +559,14 @@
 				B97466A22150EEC9004165A9 /* UIImageViewExtension.swift in Sources */,
 				68A510392154899600436952 /* RealmDataImage.swift in Sources */,
 				B95728F3214BAD710079C09F /* LoginViewController.swift in Sources */,
-				68A5103D2154A1A100436952 /* RealmImageModel.swift in Sources */,
+				68B68E422159E0AF00E241CB /* RealmImageModel.swift in Sources */,
 				68BD8E32214F518200405780 /* ImageListView.swift in Sources */,
 				B97466A42150F1C8004165A9 /* Utility.swift in Sources */,
 				68CCC2F0214FB6AB0091AD84 /* ImageCollectionViewCell.swift in Sources */,
 				68A510402154EB1300436952 /* CRUDFile.swift in Sources */,
 				B95728BC214BA5EB0079C09F /* AppDelegate.swift in Sources */,
+				68B68E432159E0AF00E241CB /* SplashbaseImage.swift in Sources */,
 				68BD8E36214F520300405780 /* ImageListViewController.swift in Sources */,
-				68CCC2E8214FA2CE0091AD84 /* SplashbaseImage.swift in Sources */,
 				680E4B4E21510AF100A86F40 /* UIViewControllerExtension.swift in Sources */,
 				68A529E821534F4F00B0AD60 /* CoreDataImage.swift in Sources */,
 				B95728F6214BB0140079C09F /* LoginView.swift in Sources */,
